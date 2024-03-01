@@ -9,7 +9,7 @@ library(tidyverse)
 
 # Simplified QoG data -----------------------------------------------------
 
-qog <- read.csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/simplified_qog.csv")
+qog <- read.csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/simplified_qog.csv")
 
 # "Codebook":
 # cname: Country name
