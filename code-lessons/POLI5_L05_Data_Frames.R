@@ -149,7 +149,7 @@ library(tidyverse)
 # Get California counties data from the web:
 cadata <-
   read.csv(
-    "https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv"
+    "https://raw.githubusercontent.com/lfalab/poli5/main/data/ca_counties_regions.csv"
   )
 
 # To visualize the data frame, you can click on it in the RStudio environment,

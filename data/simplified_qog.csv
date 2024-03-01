@@ -1,0 +1,195 @@
+"cname","reg_type","urban","peaceful","freedom_exp","wdi_expmil","wdi_expedu"
+"Afghanistan","Dictatorship","Rural","Not Peaceful","Not Guaranteed",0.945226788520813,4.0588698387146
+"Albania","Democracy","Urban","Peaceful","Guaranteed",1.10869634151459,3.61172008514404
+"Algeria","Dictatorship","Urban","Not Peaceful","Not Guaranteed",6.01425313949585,NA
+"Andorra","Democracy","Urban",NA,NA,NA,3.21708989143372
+"Angola","Dictatorship","Urban","Not Peaceful","Not Guaranteed",2.42111277580261,NA
+"Antigua and Barbuda","Democracy","Rural",NA,NA,NA,NA
+"Azerbaijan","Dictatorship","Urban","Not Peaceful","Not Guaranteed",3.82145595550537,2.47381997108459
+"Argentina","Democracy","Urban","Peaceful","Guaranteed",0.856137931346893,5.46223020553589
+"Australia","Democracy","Urban","Peaceful",NA,1.99797391891479,5.12424993515015
+"Austria","Democracy","Urban","Peaceful",NA,0.75617903470993,5.35803985595703
+"Bahamas","Democracy","Urban",NA,NA,NA,NA
+"Bahrain","Dictatorship","Urban","Not Peaceful","Not Guaranteed",4.33877515792847,2.32781004905701
+"Bangladesh","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.24291777610779,1.53553998470306
+"Armenia","Dictatorship","Urban","Not Peaceful","Not Guaranteed",3.84973049163818,2.70759010314941
+"Barbados","Democracy","Rural",NA,NA,NA,4.36638021469116
+"Belgium","Democracy","Urban","Peaceful",NA,0.895316123962402,6.41228008270264
+"Bhutan","Dictatorship","Rural","Peaceful","Guaranteed",NA,7.2257399559021
+"Bolivia","Democracy","Urban","Not Peaceful","Guaranteed",1.5362776517868,NA
+"Bosnia and Herzegovina","Democracy","Rural","Not Peaceful","Not Guaranteed",0.864182651042938,NA
+"Botswana","Democracy","Urban","Peaceful","Guaranteed",3.0057008266449,NA
+"Brazil","Democracy","Urban","Not Peaceful","Guaranteed",1.41952669620514,6.32254981994629
+"Belize","Democracy","Rural",NA,NA,1.23217976093292,7.50989007949829
+"Solomon Islands","Democracy","Rural",NA,NA,NA,NA
+"Brunei","Dictatorship","Urban",NA,NA,2.8651237487793,4.42540979385376
+"Bulgaria","Democracy","Urban","Peaceful","Guaranteed",1.24205124378204,4.09250020980835
+"Myanmar","Dictatorship","Rural","Not Peaceful","Not Guaranteed",NA,2.08768010139465
+"Burundi","Democracy","Rural","Not Peaceful","Not Guaranteed",1.8706521987915,4.76202011108398
+"Belarus","Dictatorship","Urban","Not Peaceful","Not Guaranteed",1.15637993812561,4.79499006271362
+"Cambodia","Dictatorship","Rural","Not Peaceful","Not Guaranteed",2.09646105766296,2.16285991668701
+"Cameroon","Dictatorship","Urban","Not Peaceful","Not Guaranteed",1.17379343509674,3.15481996536255
+"Canada","Democracy","Urban","Peaceful",NA,1.34952986240387,NA
+"Cape Verde","Democracy","Urban",NA,NA,0.52998298406601,5.18174982070923
+"Central African Republic","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.43596756458282,NA
+"Sri Lanka","Dictatorship","Rural","Peaceful","Guaranteed",2.13577198982239,2.79924988746643
+"Chad","Dictatorship","Rural","Not Peaceful","Not Guaranteed",2.2385892868042,2.45481991767883
+"Chile","Democracy","Urban","Peaceful","Guaranteed",1.93093991279602,5.4194598197937
+"China","Dictatorship","Urban","Not Peaceful","Not Guaranteed",1.89602959156036,NA
+"Taiwan","Democracy",NA,"Peaceful","Guaranteed",NA,NA
+"Colombia","Democracy","Urban","Not Peaceful","Guaranteed",3.20906233787537,4.53551006317139
+"Comoros","Democracy","Rural",NA,NA,NA,2.5450599193573
+"Congo","Dictatorship","Urban","Not Peaceful","Not Guaranteed",4.31213045120239,5.4650502204895
+"Congo, Democratic Republic","Dictatorship","Rural","Not Peaceful","Not Guaranteed",0.737511992454529,1.45494997501373
+"Costa Rica","Democracy","Urban","Peaceful","Guaranteed",0,7.31572008132935
+"Croatia","Democracy","Urban","Peaceful","Guaranteed",1.67376303672791,3.91712999343872
+"Cuba","Dictatorship","Urban","Not Peaceful","Not Guaranteed",2.87240314483643,NA
+"Cyprus (1975-)","Democracy","Urban","Peaceful",NA,1.58944523334503,5.77719020843506
+"Czech Republic","Democracy","Urban","Peaceful","Guaranteed",0.968686640262604,3.85402011871338
+"Benin","Democracy","Rural","Peaceful","Guaranteed",1.26413750648499,3.53558993339539
+"Denmark","Democracy","Urban","Peaceful",NA,1.14601612091064,7.81608009338379
+"Dominica","Democracy","Urban",NA,NA,NA,5.57345008850098
+"Dominican Republic","Democracy","Urban","Not Peaceful","Guaranteed",0.700998306274414,NA
+"Ecuador","Democracy","Urban","Peaceful","Not Guaranteed",2.36126327514648,4.99870014190674
+"El Salvador","Democracy","Urban","Not Peaceful","Guaranteed",1.05178546905518,3.7252299785614
+"Equatorial Guinea","Dictatorship","Urban","Peaceful","Not Guaranteed",1.10036885738373,NA
+"Ethiopia (1993-)","Dictatorship","Rural","Not Peaceful","Not Guaranteed",0.666369199752808,4.73791980743408
+"Eritrea","Dictatorship",NA,"Not Peaceful","Not Guaranteed",NA,NA
+"Estonia","Democracy","Urban","Peaceful","Guaranteed",2.01465153694153,4.97338008880615
+"Fiji","Democracy","Urban",NA,NA,1.54313707351685,NA
+"Finland","Democracy","Urban","Peaceful",NA,1.36567854881287,6.37621021270752
+"France (1963-)","Democracy","Urban","Peaceful",NA,1.91045415401459,5.45160007476807
+"Djibouti","Dictatorship","Urban","Not Peaceful","Not Guaranteed",NA,3.74855995178223
+"Gabon","Dictatorship","Urban","Not Peaceful","Not Guaranteed",1.81048941612244,2.66667008399963
+"Georgia","Democracy","Urban","Not Peaceful","Guaranteed",2.06253576278687,3.57442998886108
+"Gambia","Dictatorship","Urban","Peaceful","Guaranteed",0.710232436656952,2.42030000686646
+"Germany","Democracy","Urban","Peaceful",NA,1.16360914707184,4.90511989593506
+"Ghana","Democracy","Urban","Peaceful","Guaranteed",0.401629030704498,3.61798000335693
+"Kiribati","Democracy","Urban",NA,NA,NA,NA
+"Greece","Democracy","Urban","Not Peaceful",NA,2.51634693145752,NA
+"Grenada","Democracy","Rural",NA,NA,NA,3.17379999160767
+"Guatemala","Democracy","Urban","Not Peaceful","Not Guaranteed",0.363718897104263,2.951819896698
+"Guinea","Dictatorship","Rural","Not Peaceful","Not Guaranteed",2.46808385848999,2.31765007972717
+"Guyana","Democracy","Rural","Not Peaceful",NA,1.64128696918488,6.23007011413574
+"Haiti","Dictatorship","Urban","Not Peaceful","Guaranteed",0.000881029758602381,2.68945002555847
+"Honduras","Democracy","Urban","Not Peaceful","Not Guaranteed",1.73357713222504,6.06746006011963
+"Hungary","Democracy","Urban","Peaceful","Not Guaranteed",1.05016767978668,4.66709995269775
+"Iceland","Democracy","Urban","Peaceful",NA,0,7.65821981430054
+"India","Democracy","Rural","Not Peaceful","Guaranteed",2.50962448120117,NA
+"Indonesia","Democracy","Urban","Peaceful","Not Guaranteed",0.86525684595108,3.58360004425049
+"Iran","Dictatorship","Urban","Not Peaceful","Not Guaranteed",3.10518407821655,3.79040002822876
+"Iraq","Dictatorship","Urban","Not Peaceful","Not Guaranteed",3.86203193664551,NA
+"Ireland","Democracy","Urban","Peaceful",NA,0.307473987340927,3.50686001777649
+"Israel","Democracy","Urban","Not Peaceful",NA,5.5285062789917,6.09261989593506
+"Italy","Democracy","Urban","Peaceful",NA,1.36460876464844,4.04493999481201
+"Cote d'Ivoire","Dictatorship","Urban","Not Peaceful","Guaranteed",1.25272011756897,3.80347990989685
+"Jamaica","Democracy","Urban","Not Peaceful","Guaranteed",0.972264289855957,5.2606201171875
+"Japan","Democracy","Urban","Peaceful",NA,0.933306097984314,3.18217992782593
+"Kazakhstan","Dictatorship","Urban","Peaceful","Not Guaranteed",0.8705073595047,2.75081992149353
+"Jordan","Dictatorship","Urban","Not Peaceful","Not Guaranteed",4.84102869033813,3.28404998779297
+"Kenya","Democracy","Rural","Not Peaceful","Guaranteed",1.28102934360504,5.36668014526367
+"Korea, North","Dictatorship","Urban","Not Peaceful","Not Guaranteed",NA,NA
+"Korea, South","Democracy","Urban","Peaceful","Guaranteed",2.42148900032043,4.33309984207153
+"Kuwait","Dictatorship","Urban","Peaceful","Not Guaranteed",5.63458490371704,NA
+"Kyrgyzstan","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.60480320453644,6.02618980407715
+"Laos","Dictatorship","Rural","Peaceful","Not Guaranteed",NA,2.93780994415283
+"Lebanon","Dictatorship","Urban","Not Peaceful","Guaranteed",4.50513982772827,NA
+"Lesotho","Democracy","Rural","Not Peaceful","Not Guaranteed",1.95305562019348,7.96331977844238
+"Latvia","Democracy","Urban","Peaceful","Guaranteed",1.59064519405365,4.39711999893188
+"Liberia","Democracy","Urban","Peaceful","Guaranteed",0.405984610319138,2.76128005981445
+"Libya","Dictatorship","Urban","Not Peaceful","Not Guaranteed",15.4795761108398,NA
+"Liechtenstein","Democracy","Rural",NA,NA,NA,NA
+"Lithuania","Democracy","Urban","Peaceful","Guaranteed",1.71553862094879,3.81282997131348
+"Luxembourg","Democracy","Urban",NA,NA,0.576459288597107,3.56959009170532
+"Madagascar","Dictatorship","Rural","Peaceful","Not Guaranteed",0.58002233505249,2.82548999786377
+"Malawi","Democracy","Rural","Peaceful","Guaranteed",0.764642834663391,4.03133010864258
+"Malaysia (1966-)","Dictatorship","Urban","Peaceful","Not Guaranteed",1.11572420597076,4.67756986618042
+"Maldives","Dictatorship","Rural",NA,NA,NA,4.09970998764038
+"Mali","Dictatorship","Rural","Not Peaceful","Guaranteed",3.02714467048645,3.78730988502502
+"Malta","Democracy","Urban",NA,NA,0.506519258022308,4.82437992095947
+"Mauritania","Dictatorship","Urban","Not Peaceful","Not Guaranteed",2.93397569656372,1.94405996799469
+"Mauritius","Democracy","Rural","Peaceful","Guaranteed",0.170942410826683,5.02312994003296
+"Mexico","Democracy","Urban","Not Peaceful","Not Guaranteed",0.439493745565414,4.52281999588013
+"Monaco","Democracy","Urban",NA,NA,NA,1.45792996883392
+"Mongolia","Democracy","Urban","Peaceful","Guaranteed",0.765300929546356,4.08859014511108
+"Moldova","Democracy","Rural","Peaceful","Not Guaranteed",0.323118805885315,5.6184401512146
+"Montenegro","Democracy","Urban","Peaceful","Not Guaranteed",1.36277639865875,NA
+"Morocco","Dictatorship","Urban","Peaceful","Not Guaranteed",3.1930718421936,NA
+"Mozambique","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.03225314617157,5.50555992126465
+"Oman","Dictatorship","Urban","Peaceful","Not Guaranteed",9.61050891876221,NA
+"Namibia","Dictatorship","Rural","Peaceful","Guaranteed",3.42741918563843,NA
+"Nauru","Democracy","Urban",NA,NA,NA,NA
+"Nepal","Democracy","Rural","Not Peaceful","Guaranteed",1.72916758060455,5.51837015151978
+"Netherlands","Democracy","Urban","Peaceful",NA,1.15680372714996,5.17509984970093
+"Vanuatu","Democracy","Rural",NA,NA,NA,4.53353023529053
+"New Zealand","Democracy","Urban","Peaceful",NA,1.21180844306946,6.28366994857788
+"Nicaragua","Democracy","Urban","Peaceful","Not Guaranteed",0.625230550765991,4.35767984390259
+"Niger","Democracy","Rural","Not Peaceful","Guaranteed",2.46036767959595,2.58165001869202
+"Nigeria","Democracy","Rural","Not Peaceful","Not Guaranteed",0.430671215057373,NA
+"Norway","Democracy","Urban","Peaceful",NA,1.62227022647858,7.91198015213013
+"Micronesia","Democracy","Rural",NA,NA,NA,12.407919883728
+"Marshall Islands","Democracy","Urban",NA,NA,NA,NA
+"Palau","Democracy","Urban",NA,NA,NA,NA
+"Pakistan (1971-)","Democracy","Rural","Not Peaceful","Not Guaranteed",3.76969027519226,2.89951992034912
+"Panama","Democracy","Urban","Peaceful","Guaranteed",0,NA
+"Papua New Guinea","Democracy","Rural","Not Peaceful","Guaranteed",0.403221130371094,1.96493005752563
+"Paraguay","Democracy","Urban","Not Peaceful","Not Guaranteed",0.893948256969452,3.43833994865417
+"Peru","Democracy","Urban","Not Peaceful","Guaranteed",1.24595785140991,3.93130993843079
+"Philippines","Democracy","Rural","Not Peaceful","Not Guaranteed",1.30617082118988,NA
+"Poland","Democracy","Urban","Peaceful","Guaranteed",1.89542722702026,4.55956983566284
+"Portugal","Democracy","Urban","Peaceful",NA,1.68333673477173,5.0156102180481
+"Guinea-Bissau","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.42467486858368,NA
+"Timor-Leste","Democracy","Rural","Peaceful","Guaranteed",0.855011463165283,7.06049013137817
+"Qatar","Dictatorship","Urban","Peaceful","Not Guaranteed",NA,2.86383008956909
+"Romania","Democracy","Urban","Peaceful","Guaranteed",1.72342026233673,3.09539008140564
+"Russia","Dictatorship","Urban","Not Peaceful","Not Guaranteed",4.23340749740601,4.68990993499756
+"Rwanda","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.26467490196228,3.11083006858826
+"St Kitts and Nevis","Democracy","Rural",NA,NA,NA,2.6434600353241
+"St Lucia","Democracy","Rural",NA,NA,NA,3.33179998397827
+"St Vincent and the Grenadines","Democracy","Urban",NA,NA,NA,5.7319598197937
+"San Marino","Democracy","Urban",NA,NA,NA,3.37033009529114
+"Sao Tome and Principe","Democracy","Urban",NA,NA,NA,5.08415985107422
+"Saudi Arabia","Dictatorship","Urban","Not Peaceful","Not Guaranteed",10.2238483428955,NA
+"Senegal","Democracy","Rural","Peaceful","Guaranteed",1.46229910850525,4.62496995925903
+"Serbia","Democracy","Urban","Peaceful","Guaranteed",1.83994936943054,3.71509003639221
+"Seychelles","Dictatorship","Urban",NA,NA,1.43316221237183,4.42102003097534
+"Sierra Leone","Democracy","Rural","Peaceful","Not Guaranteed",1.09381687641144,4.63576984405518
+"Singapore","Dictatorship","Urban","Peaceful","Not Guaranteed",3.14961314201355,NA
+"Slovakia","Democracy","Urban","Peaceful","Guaranteed",1.1019332408905,3.93913006782532
+"Vietnam","Dictatorship","Rural","Peaceful","Not Guaranteed",NA,4.16744995117188
+"Slovenia","Democracy","Urban","Peaceful","Guaranteed",0.982335150241852,4.78323984146118
+"Somalia","Dictatorship","Rural","Not Peaceful","Not Guaranteed",NA,NA
+"South Africa","Democracy","Urban","Not Peaceful","Guaranteed",1.04330229759216,6.11305999755859
+"Zimbabwe","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.5449481010437,5.81877994537354
+"Spain","Democracy","Urban","Peaceful",NA,1.23067915439606,4.20773983001709
+"South Sudan","Dictatorship","Rural","Not Peaceful","Not Guaranteed",2.35453772544861,1.54390001296997
+"Sudan (2012-)","Dictatorship","Rural","Not Peaceful","Not Guaranteed",3.50716614723206,NA
+"Suriname","Democracy","Urban",NA,NA,NA,NA
+"Eswatini (former Swaziland)","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.88699853420258,7.07032012939453
+"Sweden","Democracy","Urban","Peaceful",NA,1.02407550811768,7.56883001327515
+"Switzerland","Democracy","Urban","Peaceful",NA,0.680614531040192,5.13018989562988
+"Syria","Dictatorship","Urban","Not Peaceful","Not Guaranteed",NA,NA
+"Tajikistan","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.21938121318817,5.23138999938965
+"Thailand","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.58392214775085,NA
+"Togo","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.86168158054352,4.98975992202759
+"Tonga","Dictatorship","Rural",NA,NA,NA,NA
+"Trinidad and Tobago","Democracy","Urban","Not Peaceful","Guaranteed",0.906067073345184,NA
+"United Arab Emirates","Dictatorship","Urban","Peaceful","Not Guaranteed",5.64365148544312,NA
+"Tunisia","Democracy","Urban","Not Peaceful","Not Guaranteed",2.14430212974548,6.59601020812988
+"Turkey","Democracy","Urban","Not Peaceful","Not Guaranteed",2.0652596950531,NA
+"Turkmenistan","Dictatorship","Urban","Not Peaceful","Not Guaranteed",NA,NA
+"Tuvalu","Democracy","Urban",NA,NA,NA,NA
+"Uganda","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.29359340667725,2.27204990386963
+"Ukraine","Democracy","Urban","Not Peaceful","Guaranteed",2.88440155982971,5.41226005554199
+"North Macedonia","Democracy","Urban","Not Peaceful","Not Guaranteed",0.897226750850677,NA
+"Egypt","Dictatorship","Rural","Not Peaceful","Not Guaranteed",1.42203164100647,NA
+"United Kingdom","Democracy","Urban","Peaceful",NA,1.76663684844971,5.44209003448486
+"Tanzania","Dictatorship","Rural","Peaceful","Not Guaranteed",1.17937695980072,4.4305100440979
+"United States","Democracy","Urban","Not Peaceful",NA,3.3133852481842,4.96174001693726
+"Burkina Faso","Dictatorship","Rural","Not Peaceful","Guaranteed",1.52974808216095,5.60346984863281
+"Uruguay","Democracy","Urban","Peaceful","Guaranteed",1.95640683174133,4.8403000831604
+"Uzbekistan","Dictatorship","Urban","Not Peaceful","Not Guaranteed",3.5554826259613,5.2813401222229
+"Venezuela","Dictatorship","Urban","Not Peaceful","Not Guaranteed",0.48784413933754,NA
+"Samoa","Dictatorship","Rural",NA,NA,NA,4.1622200012207
+"Yemen","Dictatorship","Rural","Not Peaceful","Not Guaranteed",3.96689105033875,NA
+"Zambia","Democracy","Rural","Peaceful","Not Guaranteed",1.30959606170654,3.72965002059937

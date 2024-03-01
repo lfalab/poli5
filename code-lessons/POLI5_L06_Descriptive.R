@@ -14,7 +14,7 @@ library(readr)
 # Get California counties data
 cadata <-
   read_csv(
-    "https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv"
+    "https://raw.githubusercontent.com/lfalab/poli5/main/data/ca_counties_regions.csv"
   )
 
 # "Codebook":
