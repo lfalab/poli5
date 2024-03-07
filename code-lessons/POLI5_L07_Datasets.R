@@ -110,7 +110,7 @@ summary(cadata$Pct_Trump_16)
 # Now we want to know: For each region in California, how many counties were won
 # by Trump? How many counties were won by Clinton? First, let's run some code to
 # add a variable on whether a county was won by Clinton or Trump:
-source("https://raw.githubusercontent.com/lfalab/econpoli5/main/add_winner.R")
+source("https://raw.githubusercontent.com/lfalab/poli5/main/code-source/add_winner.R")
 
 # We start with something
 # similar to the code for a univariate bar plot with frequencies:

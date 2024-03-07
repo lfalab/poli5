@@ -98,7 +98,7 @@ summary(reg2)
 # Plot w/ dot sizes & colors depicting data -------------------------------
 
 # Read data
-qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/qog_ca18.csv")
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/qog_ca19.csv")
 
 # Make plot
 qog %>% ggplot(aes(

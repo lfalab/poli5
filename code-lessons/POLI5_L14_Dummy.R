@@ -8,7 +8,7 @@ library(tidyverse)
 
 # Read simplified QoG -----------------------------------------------------
 
-qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/simplified_qog.csv")
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/simplified_qog.csv")
 
 # Variables:
 # cname: Country name
@@ -21,7 +21,7 @@ qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/simplif
 
 # Read California counties ------------------------------------------------
 
-cadata <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv")
+cadata <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/ca_counties_regions.csv")
 
 # Variables:
 # Pct_White_16: Percentage of white residents, 2016

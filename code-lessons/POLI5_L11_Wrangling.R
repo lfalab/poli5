@@ -17,7 +17,7 @@ dat <- read_csv("https://opportunityinsights.org/wp-content/uploads/2018/12/cty_
 dat
 
 # Add state and county names, population
-source("https://raw.githubusercontent.com/lfalab/econpoli5/main/add_st_cty_names_pop.R")
+source("https://raw.githubusercontent.com/lfalab/poli5/main/code-source/add_st_cty_names_pop.R")
 
 # Three new variables have been added: datname, stname, and pop_2010:
 glimpse(dat)
@@ -181,7 +181,7 @@ dat %>% mutate(state = recode(state, Alabama = "AL"))
 
 # Another useful function is recode_factor. To use it, let's get a different
 # dataset, the Opportunity Insights College data:
-oic <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/mrc_table10.csv")
+oic <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/college.csv")
 
 # Bar plot before recode:
 ggplot(data = oic, aes(x = type)) + geom_bar()
@@ -199,7 +199,7 @@ ggplot(data = oic, aes(x = type)) + geom_bar()
 
 # Recoding when missing appears as numeric values
 # Read made up data
-msdat <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/missing.csv")
+msdat <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/missing.csv")
 
 # Suppose that a survey with students collects data on how many states they
 # visited, but some students did not provide a valid answer. Some refused to

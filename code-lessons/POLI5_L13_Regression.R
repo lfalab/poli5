@@ -12,7 +12,7 @@ library(tidyverse)
 # Read dataset
 cadata <-
   read_csv(
-    "https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv"
+    "https://raw.githubusercontent.com/lfalab/poli5/main/data/ca_counties_regions.csv"
   )
 
 # Histogram of support for Trump (dependent variable)
@@ -57,7 +57,6 @@ lm(Pct_Trump_16 ~ Pct_White_16, data = cadata)
 # Tell me more: p-value, R-squared...
 my_reg <- lm(Pct_Trump_16 ~ Pct_White_16, data = cadata)
 
-# Tell me more: p-values, R-squared...
 summary(my_reg)
 
 # Number of observations:
@@ -132,7 +131,7 @@ summary(reg1)
 # Regression 2: Children in poverty and teen pregnancy rates --------------
 
 # Read dataset, rename and transform variables
-chr <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/chr.csv") %>% 
+chr <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/chr.csv") %>% 
   rename(teen_births = measure_14_value) %>% 
   mutate(pct_children_poverty = measure_24_value*100)
 
@@ -181,7 +180,7 @@ summary(reg2)
 # Regression 3: Voter turnout and trust in elections ----------------------
 
 # Read dataset, rename variables
-qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/qog.csv") %>% 
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/qog.csv") %>% 
   rename(voter_turnout = cpds_vt,
          trust_election = pei_eir)
 
@@ -231,7 +230,7 @@ summary(reg3)
 # Regression 4: Educational attainment and work in the farm ---------------
 
 # Read dataset, rename variables
-ihds <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/ihds.csv") %>%
+ihds <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/ihds.csv") %>%
   rename(farm_work = FM37,
          education = ED6)
 

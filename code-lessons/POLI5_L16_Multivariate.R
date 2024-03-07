@@ -8,7 +8,7 @@ library(tidyverse)
 
 # Read data ---------------------------------------------------------------
 
-cadata <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv") %>% 
+cadata <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/ca_counties_regions.csv") %>% 
   mutate(Inc_Change = (HH_Inc_16-HH_Inc_12)/HH_Inc_12*100)
 
 # Simple regression 1: Pct white and Trump vote ---------------------------

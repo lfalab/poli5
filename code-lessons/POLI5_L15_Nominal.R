@@ -8,7 +8,7 @@ library(tidyverse)
 
 # Read College dataset ----------------------------------------------------
 
-oic <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/mrc_table10.csv")
+oic <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/college.csv")
 
 # Types of variables vs. Types of vectors ---------------------------------
 

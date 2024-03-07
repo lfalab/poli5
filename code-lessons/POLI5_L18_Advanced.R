@@ -9,7 +9,7 @@ library(tidyverse)
 # Read data ---------------------------------------------------------------
 
 # Read data
-qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/qog_ca18_v2.csv")
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/qog_ca18.csv")
 
 # GDP v. Life Expectancy --------------------------------------------------
 

@@ -9,7 +9,7 @@ library(tidyverse)
 # Class activity example: correlates of corruption ------------------------
 
 # Read data
-qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/qog_ca17.csv")
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/poli5/main/data/qog_ca17.csv")
 
 # Dependent variable: Corruption Perceptions Score. Scale of 0-100 where 0 means
 # no perception of corruption and 100 means complete perception of corruption.
