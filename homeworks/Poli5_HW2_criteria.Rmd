@@ -1,0 +1,64 @@
+---
+title: "Homework 2 - Grading Criteria"
+author: "Poli 5: Data Analytics for the Social Sciences"
+output: pdf_document
+urlcolor: blue
+fontsize: 12pt
+geometry: margin=2cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Homework 2 is due on Sunday, July 30, at 11:59pm via the [Gradescope](https://canvas.ucsd.edu/courses/48003/external_tools/80) tab on Canvas. All submissions must be in PDF format.
+
+## Question 1
+
+State your research question and theory. State your hypothesis and the null hypothesis. These can be the same research question, theory, and hypothesis/null hypothesis from HW1, or you can change them entirely. If you decide to change, be sure to conduct a descriptive analysis, replicating the steps from HW1. You do not have to include any descriptive analysis here, but you should always be able to describe your data before moving onto hypothesis testing.
+
+_Grading criteria:_
+
+- Is the question a good empirical research question?
+
+- Is this theory specific and clear about how the independent variable affects the dependent variable?
+
+- Is the hypothesis specific, directional, falsifiable, and not immediately verifiable?
+
+- Is the null hypothesis stated correctly?
+
+## Question 2
+
+Run a bivariate regression to test your hypothesis. Depending on the types of your variables, you may have to recode one or more variables. Your answer should include the code you used to run your regression (including code to recode your variable(s), if necessary) and the regression output in R. **Please copy-paste your code and regression output and format them using monospaced font.** We have allowed screenshots for HW1, but many of them were difficult to read. For HW2 we will only accept copy-pasted output (formatted with monospaced font.)
+
+_Grading criteria:_
+
+- If the hypothesis includes one or more nominal variables, is(are) the nominal variable(s) correctly recoded into a dummy variable(s)?
+
+- Does the code specify the regression correctly?
+
+- Is the regression output copy-pasted and formatted with monospaced font?
+
+## Question 3
+
+Write a paragraph with the interpretation of your regression results. Your paragraph should discuss the effect of your independent variable on your dependent variable, whether the estimated slope is statistically significant, and what percentage of the variation in your dependent variable is explained by your independent variable.
+
+_Grading criteria:_
+
+- Is the interpretation of the effect of the independent variable on the dependent variable correct?
+
+- Is the interpretation of the statistical significance of the slope estimate correct?
+
+- Does the answer correctly state what percentage of the variation in the dependent variable is explained by the independent variable?
+
+## Question 4
+
+Can you think of a possible confounding variable that could be at play in your hypothesis? In your answer, please be sure to include a full justification for your proposed confounding variable. Your answer should discuss why your confounding variable (i) causes change in the dependent variable, (ii) is correlated with your independent variable and (iii) is causally prior to your independent variable.
+
+- Is the justification for the proposed confounding variable plausible?
+
+- Does the answer discuss why the confounding variable causes change in the dependent variable?
+
+- Does the answer discuss why the confounding variable is correlated with the independent variable?
+
+- Does the answer discuss why the confounding variable is causally prior to the independent variable?

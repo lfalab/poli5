@@ -1,0 +1,105 @@
+---
+title: "Homework 1 - Grading Criteria"
+author: 'POLI 5: Data Analytics for the Social Sciences'
+output:
+  pdf_document: default
+  word_document: default
+urlcolor: blue
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Homework 1 is due on Sunday, July 16, at 11:59pm via the [Gradescope](https://canvas.ucsd.edu/courses/48003/external_tools/80) tab on Canvas. All submissions must be in PDF format.
+
+If this is your first time using Gradescope, please watch [this video](https://www.youtube.com/watch?v=nksyA0s-Geo) and budget enough time to familiarize yourself with the user interface. You will need to (1) submit the writeup as a PDF document, and (2) tag individual problems according to the instructions.
+
+## Part I: Research Questions, Theories, and Hypotheses
+
+### Question 1
+
+Formulate a research question that can be empirically tested using one of the datasets in our [POLI5 Datasets folder](https://ucsdcloud-my.sharepoint.com/:f:/g/personal/lfalabel_ucsd_edu/EiK1-_1eGiNNsQNbpNAYZ_sBwVEJV4LQ2s1XOOIvkTwOLA?e=NTudt8).
+
+_Grading criteria:_
+
+- Is this a hypothetical question? In other words, is this question about some imagined scenario? If yes, please review your research question.
+
+- Is this a normative question? In other words, is this a question about what is allowed or what is good? If yes, please review your research question.
+
+- Is this a factual question? In other words, does this question have only one correct answer, which can be incontestably verified? If yes, please review your research question.
+
+### Question 2
+
+Elaborate a theory to propose an answer to your research question. Remember that we are defining *theory* as "A reasoned and precise speculation about the answer to a research question." (King, Keohane, and Verba 1994)
+
+_Grading criteria:_
+
+- Is this theory specific about how the independent variable affects the dependent variable?
+
+- Is this theory clear about how the independent variable affects the dependent variable?
+
+### Question 3
+
+State your dependent variable, your independent variable, and pose a hypothesis that can be tested with the dataset of your choice. Remember that we are defining *hypothesis* as "A statement of the relationship that you expect to find between the dependent and the independent variable." (Powner 2004)
+
+_Grading criteria:_
+
+- Is this hypothesis specific? In other words, does it clearly identify the dependent and independent variables?
+
+- Does it have directionality? In other words, does it clearly state the direction of the expected relationship between the independent and dependent variables?
+
+- Is it falsifiable? In other words, is it written in a way that evidence could be found to disconfirm it?
+
+- Is it not immediately verifiable? In other words, is it not a factual statement that can be proven true of false with a limited investigation?
+
+## Part II: Descriptive Analysis using R
+
+Choose two variables from a dataset in our [POLI5 Datasets folder](https://ucsdcloud-my.sharepoint.com/:f:/g/personal/lfalabel_ucsd_edu/EiK1-_1eGiNNsQNbpNAYZ_sBwVEJV4LQ2s1XOOIvkTwOLA?e=NTudt8). You are encouraged to choose variables related to your work for Part I of this homework, but this is entirely optional. You are allowed to choose variables unrelated to Part I or from a different dataset.
+
+### Question 1
+
+Perform univariate analyses on each one of your variables, separately. For each variable, please include a graphic (a histogram or a univariate bar plot with frequencies) and descriptive statistics (a distribution table or summary statistics table). Remember that what type of graphic and table to include for each variable will depend on the types of your variables. Be sure to format your graphics appropriately, including titles and axis labels. If you generate a histogram, be sure to set the bar width and the x axis in a way that facilitates interpretation.
+
+Include the code you used in R to generate your plots and tables. Please format your code with ``monospaced font`` (examples of monospaced font in MS Word include Courier New and Lucida Console.)
+
+_Grading criteria:_
+
+- Are the graphics appropriate for the types of variables?
+
+- Are the descriptive statistics appropriate for the types of variables?
+
+- Are the graphics formatted appropriately, with clear titles and axes labels?
+
+- Are the graphics easy to interpret? (For example: if there is a histogram, does the width of the bars allow for an easy interpretation?)
+
+- Does the answer include the R code? Is the R code formatted with monospaced font?
+
+### Question 2
+
+Conduct a bivariate analysis with your pair of variables. Include a plot that depicts the relationship between your variables. Remember that what type of plot to include depends on the types of your variables. Be sure to format your plot appropriately, including titles and axis labels.
+
+Include the code you used in R to generate your plot. Please format your code with ``monospaced font`` (examples of monospaced font in MS Word include Courier New and Lucida Console.)
+
+_Grading criteria:_
+
+- Is the graphic appropriate for the types of variables?
+
+- Is the graphic formatted appropriately, with clear titles and axes labels?
+
+- Is the graphic easy to interpret? (For example: if there is a scatter plot, do the sizes of the dots allow for an easy interpretation?)
+
+- Does the answer include the R code? Is the R code formatted with monospaced font?
+
+### Question 3
+
+Write a 4 to 5 sentence paragraph summarizing what your descriptive analysis reveals about the data. How are each of your variables distributed? Are the two variables correlated? Is the correlation in the direction you expected? What are the key takeaways of your descriptive analysis?
+
+_Grading criteria:_
+
+- Is the paragraph consistent with what the tables and graphics show?
+
+- Does the paragraph answer all questions in the prompt?
+
+- Are the takeaways consistent with the rest of the paragraph? Do they logically follow from the descriptive analysis of the data?

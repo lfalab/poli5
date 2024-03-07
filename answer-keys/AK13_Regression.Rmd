@@ -1,0 +1,242 @@
+---
+title: 'Answer Key: Regression Analysis in R'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+# Are Immigrants More Likely to Live in Places with Higher Population Density?
+
+- Theory: Immigrants are more likely to seek residence in urban settings due to their greater diversity and acceptance of other cultures.
+- Hypothesis: The percentage of foreign residents is greater in counties with higher population densities.
+- Dataset: Opportunity Insights County Characteristics.
+- Dependent variable: Percent of foreign-born residents (foreign_pct2010).
+- Independent variable: Population density–number of residents per square mile (popdensity2010).
+
+```{r reg1-data}
+oicc <- read_csv("https://opportunityinsights.org/wp-content/uploads/2018/12/cty_covariates.csv") %>% 
+  mutate(foreign_pct2010 = foreign_share2010*100)
+```
+
+```{r reg1-scatter, out.width="75%", out.height="75%", fig.align='center'}
+# Scatter plot
+ggplot(data = oicc, aes(x = popdensity2010, y = foreign_pct2010)) +
+  geom_point(alpha = 0.25) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_x_continuous(breaks = seq(0, 70000, 10000)) +
+  scale_y_continuous(breaks = seq(0, 80, 10)) +
+  labs(title = "Percent Foreign Residents and Population Density",
+       subtitle = "By U.S. County, 2010",
+       x = "Population Density, 2010",
+       y = "Percent Foreign Residents, 2010") +
+  theme_bw()
+```
+
+```{r reg1-results, echo=TRUE}
+# Regression
+reg1 <- lm(foreign_pct2010 ~ popdensity2010, data = oicc)
+summary(reg1)
+```
+
+```{r reg1-ci, echo=TRUE}
+# Confidence interval
+confint(reg1,"popdensity2010",level = 0.95)
+```
+
+## Answers
+
+1. Null hypothesis: there is no relationship between the share of immigrant population and population density.
+
+2. If we want to strictly follow what is being asked, we could say that for an increase of 1 person per square mile, we should expect an increase of approximately 1/1000 percentage point in the share of imigrants in the population. However, a better way to report the result is to state that for an increase of 1,000 people per square mile, we should expect the share of immigrants to increase by 1 percentage point.
+
+3. Approximately 10% of the variation in the dependent variable is explained by the independent variable.
+
+4. The p-value is less than 0.05, and therefore we can reject the null hypothesis at the significance level of 0.05.
+
+5. Because the 95% CI does not include zero, we can reject the null hypothesis. We conclude that the percentage of foreign residents is greater in counties with higher population densities.
+
+6. One possible confounding variable would be the number of employment opportunities, which tends to be higher in urban centers with more population density, and could attract more immigrants seeking employment.
+
+# Is Teenage Pregnancy More Common in Areas With More Children Living in Poverty?
+
+- Theory: Communities with more children in poverty have less access to education and contraceptive methods, which leads to a higher incidence of teenage pregnancy. 
+- Hypothesis: Teen births are more frequent in counties with higher percentages of children in poverty. 
+- Dataset: Community Health Rankings. 
+- Dependent variable: Teen births per 100,000 people (teen_births). 
+- Independent variable: Percentage of children in poverty (pct_children_poverty).
+
+```{r reg2-data}
+# Read dataset, rename and transform variables
+chr <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/chr.csv") %>% 
+  rename(teen_births = measure_14_value) %>% 
+  mutate(pct_children_poverty = measure_24_value*100)
+```
+
+```{r reg2-scatter, out.width="75%", out.height="75%", fig.align='center'}
+# Scatter plot
+ggplot(data = chr, aes(x = pct_children_poverty, y = teen_births)) +
+  geom_point(alpha = 0.25) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_x_continuous(breaks = seq(0, 65, 5)) +
+  scale_y_continuous(breaks = seq(0, 110, 10)) +
+  labs(title = "Teen Births and Percent Childen in Poverty",
+       subtitle = "By U.S. County",
+       x = "Percent Children in Poverty",
+       y = "Teen Births per 100,000 people") + 
+  theme_bw()
+```
+
+```{r reg2-results}
+# Regression
+reg2 <- lm(teen_births ~ pct_children_poverty, data = chr)
+summary(reg2)
+```
+
+```{r reg2-ci, echo=TRUE}
+# Confidence interval
+confint(reg2,"pct_children_poverty",level = 0.95)
+```
+
+## Answers
+
+1. Null hypothesis: there is no relationship between teenage pregnancy and child poverty.
+
+2. For an increase of 1 percentage point of children in poverty, we should expect an increase of approximately 1.2 teen births per 100,000 people (notice how the dependent variable is *not* being measured as a percentage, and therefore it would be *incorrect* to state that we should expect an increase of 1.2 percentage points in teen births.)
+
+3. Approximately 50% of the variation in the dependent variable is explained by the independent variable.
+
+4. The p-value is less than 0.05, and therefore we can reject the null hypothesis at the significance level of 0.05.
+
+5. Because the 95% CI does not include zero, we can reject the null hypothesis. We conclude that teen births are more frequent in counties with higher percentages of children in poverty.
+
+6. One possible confounding variable is the level of social expenditures of the local government. In counties where social spending is greater, we should expect that fewer children would be living in poverty due to policy interventions to increase the incomes of their families. Social expenditures could also increase access to contraceptive methods and help contain teen pregnancy.
+
+# Is Voter Turnout Higher in Countries Where People Trust Elections?
+
+- Theory: People will not turn out to vote in an election if they think the election will be rigged; trust in a country's election integrity is necessary for a high rate of voter turnout.
+- Hypothesis: Voter turnout is higher in countries where more people trust the integrity of their elections.
+- Dataset: Quality of Government.
+- Dependent variable: Percent voter turnout in presidential election (voter_turnout).
+- Independent variable: How people in the country rate the integrity of their elections on a scale from 1 (very poor) to 10 (very good) (trust_election).
+
+```{r reg3-data}
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/qog.csv") %>% 
+  rename(voter_turnout = cpds_vt,
+         trust_election = pei_eir)
+```
+
+```{r reg3-scatter, out.width="75%", out.height="75%", fig.align='center'}
+ggplot(data = qog, aes(x = trust_election, y = voter_turnout)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_x_continuous(breaks = 5:10) +
+  xlim(5, 10) +
+  scale_y_continuous(breaks = seq(40, 100, 5)) +
+  labs(title = "Trust in Elections and Voter Turnout",
+       subtitle = "By Country",
+       x = "Level of Trust in Elections",
+       y = "Percent Voter Turnout in Presidential Elections") + 
+  theme_bw()
+```
+
+```{r reg3-results}
+reg3 <- lm(voter_turnout ~ trust_election, data = qog)
+summary(reg3)
+```
+
+```{r reg3-ci, echo=TRUE}
+# Confidence interval
+confint(reg3,"trust_election",level = 0.95)
+```
+
+## Answers
+
+1. Null hypothesis: there is no relationship between turnout and trust in elections.
+
+2. For an increase of 1 in the scale of trust in elections, we should expect voter turnout to increase by 5.5 percentage points.
+
+3. Approximately 12% of the variation in voter turnout is explained by trust in elections.
+
+4. The p-value is less than 0.05, and therefore we can reject the null hypothesis at the significance level of 0.05.
+
+5. Because the 95% CI does not include zero, we can reject the null hypothesis. We conclude that turnout is higher in countries where people trust elections.
+
+6. One possible confounding variable would be whether the country is democratic. It is common for dictatorships to organize non-competitive elections to create an appearance of democracy, and this can affect people's trust in elections as well as voter turnout.
+
+# Do People With More Years of Education Spend Less Time Working on the Farm?
+
+- Theory: People with greater educational attainment are more likely to earn better wages, and therefore can spend less time working in the farm.
+- Hypothesis: People with more years of education spend fewer hours a day working in the farm.
+- Dataset: India Human Development Survey.
+- Dependent variable: Days per year working in the farm (farm_work).
+- Independent variable: Years of education (education).
+
+```{r reg4-data}
+ihds <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/ihds.csv") %>%
+  rename(farm_work = FM37,
+         education = ED6)
+```
+
+```{r reg4-scatter, out.width="75%", out.height="75%", fig.align='center'}
+ihds %>% 
+  group_by(education) %>% 
+  summarize(mean_farm = mean(farm_work, na.rm = TRUE)) %>% 
+  ggplot(aes(x = education, y = mean_farm)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_x_continuous(breaks = seq(0, 16, 2)) +
+  labs(title = "Time Spent Working in the Farm and Education",
+       subtitle = "By Person (India Human Development Survey)",
+       x = "Years of Education",
+       y = "Days per Year Working on the Farm (Mean)") +
+  theme_bw()
+```
+
+```{r reg4-results}
+reg4 <- lm(farm_work ~ education, data = ihds)
+summary(reg4)
+```
+
+```{r reg4-ci, echo=TRUE}
+# Confidence interval
+confint(reg4,"education",level = 0.95)
+```
+
+## Answers
+
+1. Null hypothesis: there is no relationship between education and time spent working on the farm.
+
+2. For an increase of 1 year of education, we should expect the number of days working on the farm to increase by 0.45.
+
+3. Less than 0.1% of the variation in time spent working on the farm is explained by years of education.
+
+4. The p-value is less than 0.05, and therefore we can reject the null hypothesis at the significance level of 0.05.
+
+5. Because the 95% CI does not include zero, we can reject the null hypothesis. However, the conclusion is the opposite of what the hypothesis stated. Whereas we expected there to be a negative correlation, the existing correlation is positive.
+
+6. One possible confounding variable would be family wealth. Family wealth can lead someone to spend less time doing farm-related work, and should also be positively correlated with years of education.

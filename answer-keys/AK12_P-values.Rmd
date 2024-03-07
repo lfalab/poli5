@@ -1,0 +1,111 @@
+---
+title: 'Answer Key: Hypothesis Testing with P-values'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+```{r data, include=FALSE}
+# Read data
+qog <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/simplified_qog.csv")
+```
+
+# Do Democracies Spend More in Education than Dictatorships?
+
+One possible theory would be that democratic leaders are more accountable to the demands of citizens, and therefore we should expect democracies to spend more in education. The null hypothesis would be that there is no relationship between regime type and educational spending.
+
+```{r q1, out.width="66%", out.height="66%", fig.align='center'}
+# Box plot
+ggplot(data = qog %>% filter(!is.na(reg_type)),
+       aes(x = reg_type, y = wdi_expedu)) +
+  geom_boxplot() +
+  labs(
+    y = "Education Spending",
+    x = "Regime Type",
+    title = "Education Spending (as % of GDP) and Regime Type",
+    subtitle = "By Country"
+  ) +
+  theme_bw()
+
+# Difference in means test
+t.test(wdi_expedu ~ reg_type, data = qog)
+```
+
+As we can see in the box plot, democracies tend to spend more in education than dictatorships. The t-test (also known as difference in means test) shows that this difference is statistically significant. The p-value is less than 0.05, and 95% CI does not include zero. We reject the null hypothesis and conclude that democracies spend more in education than dictatorships.
+
+One possible confounding variable would be the level of technological complexity of countries' economic activities. According to [modernization theory](https://en.wikipedia.org/wiki/Modernization_theory#Modernization_and_democracy), technological progress leads to more complex societies, driving urbanization, the establishment of a middle class, and a stronger civil society, all of which are forces that make democratization more likely while increasing demands for educational spending.
+
+# Do Democracies Spend More in the Military than Dictatorships?
+
+One possible theory would be that dictatorships spend more in the military than democracies because autocratic leaders have incentives to invest in the military as a way to strengthen the country's repressive apparatus. The null hypothesis would be that there is no relationship between regime type and military spending.
+
+```{r q2, out.width="66%", out.height="66%", fig.align='center'}
+# Box plot
+ggplot(data = qog %>% filter(!is.na(reg_type)),
+       aes(x = reg_type, y = wdi_expmil)) +
+  geom_boxplot() +
+  labs(
+    y = "Military Spending",
+    x = "Regime Type",
+    title = "Military Spending (as % of GDP) and Regime Type",
+    subtitle = "By Country"
+  ) +
+  theme_bw()
+
+# Difference in means test
+t.test(wdi_expmil ~ reg_type, data = qog)
+```
+
+In fact, the data show that dictatorships spend much more in the military, and the difference is statistically significant. We reject the null hypothesis and conclude that dictatorships spend more in the military than democracies.
+
+One possible confounding variable is whether the country is at war. War could boost military spending and cause political instability, which could create scenarios more prone to coups and the rise of autocratic leadership.
+
+# Do Urban Countries Spend More in Education than Rural Countries?
+
+One theory would be that urban countries are more likely to have a labor market that demands more years of education, given the greater complexity of economic activities in urban settings. The null hypothesis is that there is no relationship between spending on education and urbanization level.
+
+```{r q3, out.width="66%", out.height="66%", fig.align='center'}
+# Box plot
+ggplot(data = qog %>% filter(!is.na(urban)),
+       aes(x = urban, y = wdi_expedu)) +
+  geom_boxplot() +
+  labs(
+    y = "Education Spending",
+    x = "Urbanization",
+    title = "Education Spending (as % of GDP) and Urbanization",
+    subtitle = "By Country"
+  ) +
+  theme_bw()
+
+# Difference in means test
+t.test(wdi_expedu ~ urban, data = qog)
+```
+
+In our data, urban countries spend slightly more in education. However, the difference is not statistically significant at the 0.05 level. We fail to reject the null hypothesis, and we cannot conclude that urban countries spend more in education.
+
+One possible confounding variable would be the amount of foreign direct investment (FDI) in the country's industrial sector, which could drive urbanization via the migration of people to the cities to work in industry. FDI in the industrial sector could also be associated with greater educational spending by generating a demand for a more skilled workforce.

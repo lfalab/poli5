@@ -1,0 +1,30 @@
+---
+title: "Homework 2"
+author: "Poli 5: Data Analytics for the Social Sciences"
+output: pdf_document
+urlcolor: blue
+fontsize: 12pt
+geometry: margin=2cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Homework 2 is due on Sunday, July 30, at 11:59pm via the [Gradescope](https://canvas.ucsd.edu/courses/48003/external_tools/80) tab on Canvas. All submissions must be in PDF format.
+
+## Question 1
+
+State your research question and theory. State your hypothesis and the null hypothesis. These can be the same research question, theory, and hypothesis/null hypothesis from HW1, or you can change them entirely. If you decide to change, be sure to conduct a descriptive analysis, replicating the steps from HW1. You do not have to include any descriptive analysis here, but you should always be able to describe your data before moving onto hypothesis testing.
+
+## Question 2
+
+Run a bivariate regression to test your hypothesis. Depending on the types of your variables, you may have to recode one or more variables. Your answer should include the code you used to run your regression (including code to recode your variable(s), if necessary) and the regression output in R. **Please copy-paste your code and regression output and format them using monospaced font.** We have allowed screenshots for HW1, but many of them were difficult to read. For HW2 we will only accept copy-pasted output (formatted with monospaced font.)
+
+## Question 3
+
+Write a paragraph with the interpretation of your regression results. Your paragraph should discuss the effect of your independent variable on your dependent variable, whether the estimated slope is statistically significant, and what percentage of the variation in your dependent variable is explained by your independent variable.
+
+## Question 4
+
+Can you think of a possible confounding variable that could be at play in your hypothesis? In your answer, please be sure to include a full justification for your proposed confounding variable. Your answer should discuss why your confounding variable (i) causes change in the dependent variable, (ii) is correlated with your independent variable and (iii) is causally prior to your independent variable.

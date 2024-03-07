@@ -1,0 +1,96 @@
+---
+title: 'Answer Key: Descriptive Analysis'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+```{r data, include=FALSE}
+# Read data
+cadata_new <-
+  read_csv(
+    "https://raw.githubusercontent.com/lfalab/econpoli5/main/ca_counties_regions.csv"
+  ) %>% 
+  mutate(
+    Inc_Change = (HH_Inc_16 - HH_Inc_12)/HH_Inc_12*100
+  )
+```
+
+# Run Summary Statistics
+
+```{r sumstat}
+summary(cadata_new$Inc_Change)
+```
+
+# Interpret Summary Statistics
+
+a. Income decreased by about 10.8% in the county where income decreased the most.
+
+b. Income increased by about 11.8% in the county where income increased the most.
+
+c. The 1st quartile (value that separates the bottom $\frac{1}{4}$ from the top $\frac{3}{4}$) is approximately -5.1
+
+d. The median (value that separates the bottom $\frac{1}{2}$ from the top $\frac{3}{2}$) is approximately -2.66
+
+e. The 3rd quartile (value that separates the bottom $\frac{3}{4}$ from the top $\frac{1}{4}$) is approximately -0.86
+
+# Histogram for `Inc_Change`
+
+```{r hist, out.width="75%", out.height="75%", fig.align='center'}
+ggplot(data = cadata_new, aes(x = Inc_Change)) +
+  geom_histogram(breaks = seq(-12, 12, 2), fill = "white", color = "black") +
+  scale_x_continuous(breaks = seq(-12, 12, 2)) +
+  scale_y_continuous(breaks = seq(0, 12, 2)) +
+    labs(title = "Distribution of Income Change, 2012-16",
+       subtitle = "California Counties",
+       x = "Percent Income Change, 2012-16",
+       y = "Frequency") +
+  theme_bw()
+  
+```
+
+# Make Scatter Plot
+
+```{r scatter, out.width="75%", out.height="75%", fig.align='center'}
+ggplot(data = cadata_new, aes(x = Inc_Change, y = Pct_Trump_16)) +
+  geom_point() + 
+  labs(
+    y = "Two-party vote share for Donald Trump, 2016",
+    x = "Percent Income Change, 2012-16",
+    title = "Income Change and 2016 Election Results",
+    subtitle = "California Counties, 2012-16"
+  ) +
+  scale_x_continuous(breaks = seq(-12, 12, 2)) +
+  scale_y_continuous(breaks = seq(0, 80, 10)) +
+  theme_bw()
+  
+```
+
+# Interpret Scatter Plot
+
+The scatter plot shows a negative correlation between support for Donald Trump and percent income change between 2012 and 2016. Trump had high levels of support in counties that became poorer, and low levels of support in counties that became richer. Because Trump was a Republican candidate, and a Democratic president was in office between 2012 and 2016, it is not surprising that Trump, as the opposition candidate, had more electoral appeal in counties where voters lost income. In such counties, voters were more likely to punish the incumbent party for their income losses.

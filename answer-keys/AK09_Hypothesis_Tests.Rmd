@@ -1,0 +1,106 @@
+---
+title: 'Answer Key: Hypothesis Testing with Confidence Intervals'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+```{r read-data, echo=FALSE}
+qog <- read.csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/simplified_qog.csv")
+```
+
+# Are countries with freedom of speech more likely to be peaceful?
+
+Many theories could be acceptable. One of them would be that a lack of freedom of speech could lead to more resentment towards the government, generating an opposition more violent than in countries where freedom of speed is guaranteed.
+
+# Hypothesis
+
+The hypothesis that is logically consistent with the theory above is that countries with freedom of speech are more likely to be peaceful. The null hypothesis is that there is no relationship between freedom of speech and peace. The dependent variable is the level of peace, and the independent variable is the presence of freedom of speech.
+
+# Distribution Tables and Univariate Bar Plots
+
+```{r univar-plots, out.width="75%", out.height="75%", fig.align='center'}
+# Distribution table of freedom of speech
+table(qog$freedom_exp)
+# Univariate bar plot with frequencies
+ggplot(data = filter(qog, !is.na(freedom_exp)), aes(x = freedom_exp)) + 
+  geom_bar(fill = "white",
+           color = "black") +
+  scale_y_continuous(breaks = seq(0, 90, 10)) +
+  labs(title = "Number of Countries With and Without Freedom of Speech",
+       x = "Freedom of Speech",
+       y = "Frequency") +
+  theme_bw()
+
+# Distribution table of peacefulness
+table(qog$peaceful)
+# Univariate bar plot with frequencies
+ggplot(data = filter(qog, !is.na(peaceful)), aes(x = peaceful)) + 
+  geom_bar(fill = "white",
+           color = "black") +
+  scale_y_continuous(breaks = seq(0, 90, 10)) +
+  labs(title = "Number of Peaceful Vs. Non-peaceful countries",
+       x = "Peacefulness",
+       y = "Frequency") +
+  theme_bw()
+```
+
+# Bivariate Bar Plot
+
+```{r bivar-plots, out.width="75%", out.height="75%", fig.align='center'}
+ggplot(data = filter(qog,!is.na(peaceful) &
+                       !is.na(freedom_exp)),
+       aes(x = freedom_exp, fill = peaceful)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Freedom of Speech and Peacefulness",
+       fill = "Peacefulness",
+       x = "Freedom of Speech",
+       y = "Frequency") +
+  theme_bw()
+```
+
+# Cross Table
+
+```{r crosstab}
+freedom_peace <- table(qog$freedom_exp, qog$peaceful)
+freedom_peace
+```
+
+# Row Proportions
+
+```{r row-prop}
+prop.table(freedom_peace, 1)
+```
+
+# Difference in Proportions Test
+
+```{r}
+prop.test(freedom_peace, correct = FALSE)
+```
+
+The difference in proportions test supports the hypothesis that countries with freedom of speech are more peaceful. We can be 95% confident that the difference does not include zero, and we can reject the null hypothesis.

@@ -1,0 +1,111 @@
+---
+title: 'Answer Key: Working with Data Frames'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+```{r read-data, echo=FALSE}
+countries <- read.csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/countries.csv")
+```
+
+# Vector with Populations 
+
+To retrieve the vector in the R console without saving it into a object, we run
+
+```{r q1a}
+countries$population
+```
+
+Alternatively, we can save the vector into an object. We can name this object whatever we want:
+
+```{r q1b}
+pop_vector <- countries$population
+```
+
+# India Data
+
+Remember that we are entering information in the square brackets and before the comma:
+
+```{r q2}
+countries[countries$country.name == "India",]
+```
+
+# Urban Population of Mexico
+
+Here, we must enter information in the square brackets, before AND after the comma:
+
+```{r q3}
+countries[countries$country.name == "Mexico","population"]
+```
+
+# Create Variables
+
+a. Create `pct.urban`
+
+To create a new variable containing the percent of the population living in urban areas:
+
+```{r q4a}
+countries$pct.urban <- countries$urban.pop/countries$population*100
+```
+
+b. Create `emissions.pc`
+
+Carbon dioxide emissions per capita:
+
+```{r q4b}
+countries$emissions.pc <- countries$carbon.emissions/countries$population
+```
+
+c. Create `log.emissions.pc`
+
+Take the log of carbon dioxide emissions per capita:
+
+```{r q4c}
+countries$log.emissions.pc <- log(countries$emissions.pc)
+```
+
+# Make scatter plot
+
+```{r q5, out.width="75%", out.height="75%", fig.align='center'}
+ggplot(data = countries, aes(x = pct.urban, y = log.emissions.pc)) +
+  geom_point() +
+  # Add labels
+  labs(
+    title = "Urbanization and Carbon Dioxide Emissions by Country",
+    x = "Percent Urban",
+    y = "Log of Carbon Dioxide Emissions Per Capita"
+  ) +
+  scale_x_continuous(breaks = seq(0, 100, 20)) +
+  scale_y_continuous(breaks = seq(-4, 4, 1)) +
+  theme_bw()
+```
+
+# Interpret Scatter Plot
+
+The scatter plot shows a positive correlation between levels of urbanization and carbon dioxide emissions per capita: countries where higher percentages of the population live in urban areas emit more carbon dioxide than countries where lower percentages of the population live in urban areas. This correlation goes according to what we should expect, given how more urbanized countries tend to conduct more economic activities that emit carbon dioxide, such as transportation that uses fossil fuels.

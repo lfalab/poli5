@@ -1,0 +1,118 @@
+---
+title: 'Answer Key: Data Wrangling'
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{amsfonts}
+- \usepackage{amssymb}
+- \usepackage{placeins}
+- \usepackage{xcolor}
+- \usepackage{amsmath}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{setspace}
+- \usepackage{graphicx}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \fancyhf{}
+- \fancyhead[L]{POLI5}
+- \fancyhead[C]{Data Analytics for the Social Sciences}
+- \fancyhead[R]{Leo Falabella (UCSD)}
+- \setlength{\headheight}{14.49998pt}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align = "center")
+library(tidyverse)
+```
+
+```{r read-data, echo=FALSE}
+oic <- read_csv("https://raw.githubusercontent.com/lfalab/econpoli5/main/mrc_table10.csv")
+```
+
+# Which universities had the highest SAT scores in 2013?
+
+```{r}
+oic %>% 
+  # Use the select() function to retain only the columns that contain the
+  # college names and their average SAT scores for 2013.
+  select(name, sat_avg_2013) %>% 
+  # Use the arrange() function to rank them by highest to lowest. This will give
+  # you a ranking of the 10 colleges with the highest average SAT scores.
+  arrange(desc(sat_avg_2013))
+```
+
+# In which universities did SAT scores increase the most from 2001-2013?
+
+```{r}
+oic %>% 
+  # Use select() to retain only the columns containing the college names, their
+  # average SAT scores for 2013, and average SAT scores for 2001.
+  select(name, sat_avg_2001, sat_avg_2013) %>% 
+  # Use filter() to subset the data so that we drop any college for which
+  # information on SAT scores is missing (drop NAs for SAT scores).
+  filter(!is.na(sat_avg_2001) & !is.na(sat_avg_2013)) %>% 
+  # Use mutate() to generate a variable containing the change in average SAT
+  # scores from 2001 to 2013.
+  mutate(sat_change = sat_avg_2013 - sat_avg_2001) %>% 
+  # Use arrange() to rank colleges according to this new variable from highest
+  # to lowest.
+  arrange(desc(sat_change))
+```
+
+# Did costs increase more for public or private schools?
+
+```{r}
+oic %>%
+  # The dataset has a variable that classifies colleges into “Public”, “Private
+  # nonprofit”, and “Private for-profit”, but we are only interested in the
+  # distinction between private and public schools. Use the mutate() and
+  # case_when() functions to recode this variable so that private colleges fall
+  # under the same category.
+  mutate(
+    type = case_when(type == 1 ~ "Public",
+                     type == 2 | type == 3 ~ "Private"),
+    # Use mutate() to create a variable that computes the percent change in
+    # sticker prices for each college, from 2001 to 2013.
+    pct_price_change = (sticker_price_2013 - sticker_price_2000) /
+      sticker_price_2000 * 100
+  ) %>%
+  # Using group_by() and summarize(), group colleges by type and calculate the
+  # median percentual price changes for each type.
+  group_by(type) %>% 
+  summarize(median_price_change = median(pct_price_change, na.rm = TRUE)) %>% 
+  arrange(desc(median_price_change))
+```
+
+# In which states are public schools most expensive? And least expensive?
+
+Most expensive:
+
+```{r}
+oic %>% 
+  # Use filter() to subset your data, keeping only public schools.
+  filter(type == 1) %>%
+  # Using group_by() and summarize(), group colleges by state and calculate the
+  # median sticker price (in 2013) in each state.
+  group_by(state) %>% 
+  summarize(median_stateu_price = median(sticker_price_2013, na.rm = TRUE)) %>% 
+  # Use arrange() to rank states from highest to lowest median sticker price.
+  arrange(desc(median_stateu_price))
+```
+
+Least expensive:
+
+```{r}
+# On a separate line of code, rank states from lowest to highest meadian sticker
+# price.
+oic %>% 
+  filter(type == 1) %>%
+  group_by(state) %>% 
+  summarize(median_stateu_price = median(sticker_price_2013, na.rm = TRUE)) %>% 
+  arrange(median_stateu_price)
+```
+
