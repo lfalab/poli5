@@ -1,9 +1,8 @@
 # POLI 5: Data Analytics for the Social Sciences
 
-This repository contains R scripts and .Rmd files I designed for my course offering of [POLI 5: Data Analytics for the Social Sciences](https://ucsdcloud-my.sharepoint.com/:b:/g/personal/lfalabel_ucsd_edu/EZfG60b60XNPtdHGJ93FLxoBJG1jwj339LlK8_SVIvQPVg?e=7IoNAI
-) at UC San Diego. 
+This repository contains R scripts and .Rmd files I designed for my course offering of [POLI 5: Data Analytics for the Social Sciences](https://ucsdcloud-my.sharepoint.com/:b:/g/personal/lfalabel_ucsd_edu/EZfG60b60XNPtdHGJ93FLxoBJG1jwj339LlK8_SVIvQPVg?e=7IoNAI) at UC San Diego.
 
-My teaching adopts a flipped-classroom approach. Students watch pre-recorded lectures before each session, and lectures may contain [slides](https://ucsdcloud-my.sharepoint.com/:f:/g/personal/lfalabel_ucsd_edu/Eoi6VC0dvSlEmMG_Lkh8UHsBVwrjQuvVLZqx4aSudmQ4vg?e=ybohRn), R code, or both, with students having access to such files beforehand.
+My teaching adopts a flipped classroom approach. Before each session, students watch pre-recorded lectures, which may contain [slides](https://ucsdcloud-my.sharepoint.com/:f:/g/personal/lfalabel_ucsd_edu/Eoi6VC0dvSlEmMG_Lkh8UHsBVwrjQuvVLZqx4aSudmQ4vg?e=ybohRn), R code, or both. Students have access to such files beforehand.
 
 We spend minimal time reviewing lecture material in class. Sessions are mostly dedicated to [class activities](https://ucsdcloud-my.sharepoint.com/:b:/g/personal/lfalabel_ucsd_edu/Ed4wEbE-D8hHlmu-vz1rIuYBghnxm4C-XA1KWFpvhwmuwA?e=D3pZjq).
 
